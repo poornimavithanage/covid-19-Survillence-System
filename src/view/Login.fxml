@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <ImageView fitHeight="346.0" fitWidth="315.0" layoutX="154.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/login.png" />
+         </image></ImageView>
+      <VBox layoutX="196.0" layoutY="65.0" prefHeight="274.0" prefWidth="205.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="38.0" prefWidth="210.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" alignment="CENTER" prefHeight="31.0" prefWidth="282.0" promptText="Username" />
+            <Label fx:id="lblUsernameError" prefHeight="26.0" prefWidth="282.0" textFill="darkred" />
+            <PasswordField fx:id="txtPassword" alignment="CENTER" prefHeight="36.0" prefWidth="282.0" promptText="Password" />
+            <Label fx:id="lblPasswordError" prefHeight="26.0" prefWidth="282.0" textFill="darkred"/>
+            <ComboBox fx:id="cmbUserRole" prefHeight="34.0" prefWidth="215.0" promptText="Select User Role" />
+            <Label fx:id="lblUserRoleError" prefHeight="26.0" prefWidth="208.0" textFill="darkred"/>
+            <Button fx:id="btnLogin" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnLogin_OnAction" prefHeight="32.0" prefWidth="285.0" text="Login" />
+         </children>
+      </VBox>
+      <ImageView fx:id="icon_loading" fitHeight="51.0" fitWidth="45.0" layoutX="415.0" layoutY="280.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/loading.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

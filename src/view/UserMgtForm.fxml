@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="760.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageUsersController">
+    <children>
+        <Label layoutX="213.0" layoutY="34.0" prefHeight="36.0" prefWidth="228.0" text="Manage Users">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnHome_OnAction" prefHeight="40.0" prefWidth="130.0" text="Home">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../asset/home-icon.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="btnAddNewUser" layoutX="419.0" layoutY="70.0" mnemonicParsing="false" onAction="#btnAddNew_onAction" prefHeight="26.0" prefWidth="172.0" style="-fx-cursor: hand; -fx-background-color: #007bff; -fx-text-fill: white;" text="+ Add New User" />
+      <TextField fx:id="txtFirst_name" layoutX="13.0" layoutY="107.0" prefHeight="36.0" prefWidth="359.0" promptText="Enter  name" />
+      <TextField fx:id="txtContactNo" layoutX="13.0" layoutY="152.0" prefHeight="36.0" prefWidth="359.0" promptText="Enter Contact No" />
+      <TextField fx:id="txtEmail" layoutX="13.0" layoutY="197.0" prefHeight="36.0" prefWidth="359.0" promptText="Enter Email" />
+      <TextField fx:id="txtUsername" layoutX="13.0" layoutY="248.0" prefHeight="36.0" prefWidth="359.0" promptText="Enter Username" />
+        <TextField fx:id="txtPasswordShow" layoutX="13.0" layoutY="303.0" prefHeight="36.0" prefWidth="359.0" promptText="Enter Password" />
+      <PasswordField fx:id="txtPasswordHide" layoutX="13.0" layoutY="303.0" prefHeight="36.0" prefWidth="359.0" promptText="Enter Password" />
+        <ImageView fx:id="imgPasswordHide" fitHeight="26.0" fitWidth="44.0" layoutX="340.0" layoutY="308.0" onMouseClicked="#imgPasswordHide_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/passwordShow.jpg" />
+         </image>
+      </ImageView>
+        <ImageView fx:id="imgPasswordShow" fitHeight="26.0" fitWidth="44.0" layoutX="340.0" layoutY="308.0" onMouseClicked="#imgPasswordShow_OnMouseClicked" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../asset/passwordShow.jpg" />
+            </image>
+        </ImageView>
+      <ComboBox fx:id="cmbUserRole" layoutX="13.0" layoutY="358.0" prefHeight="36.0" prefWidth="359.0" promptText="Select User Role" />
+      <ComboBox fx:id="cmbUserLocation" layoutX="13.0" layoutY="419.0" prefHeight="26.0" prefWidth="359.0" promptText="Select Location" />
+
+      <TextField fx:id="txtSearch" layoutX="13.0" layoutY="523.0" prefHeight="26.0" prefWidth="563.0" promptText="Filter by User Name or Name" />
+      <TableView fx:id="tblUsers" layoutX="12.0" layoutY="559.0" prefHeight="168.0" prefWidth="563.0">
+        <columns>
+
+          <TableColumn prefWidth="143.60000610351562" text="Name" />
+            <TableColumn prefWidth="213.80001831054688" text="User Name" />
+            <TableColumn prefWidth="204.60000610351562" text="Role" />
+            
+        </columns>
+      </TableView>
+           
+           <Button fx:id="btnSave" layoutX="291.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnSave_onAction" prefHeight="26.0" prefWidth="124.0" style="-fx-cursor: hand; -fx-background-color: #218838; -fx-text-fill: white;" text="Save" />
+     
+      <TextField fx:id="txtUserId" layoutX="109.0" layoutY="70.0" prefHeight="26.0" prefWidth="208.0" promptText="MXXX" />
+      <Label layoutX="22.0" layoutY="74.0" prefHeight="18.0" prefWidth="76.0" text="User ID:" />
+      <Label fx:id="lbl_passwordError" layoutX="383.0" layoutY="311.0" prefHeight="18.0" prefWidth="228.0" textFill="#f44336" />
+      <Label fx:id="lbl_uerNameError" layoutX="377.0" layoutY="256.0" prefHeight="18.0" prefWidth="237.0" textFill="#f44336" />
+      <Label fx:id="lbl_emailError" layoutX="381.0" layoutY="206.0" prefHeight="18.0" prefWidth="228.0" textFill="#f44336" />
+      <Label fx:id="lbl_ContactNoError" layoutX="381.0" layoutY="161.0" prefHeight="18.0" prefWidth="218.0" textFill="#f44336" />
+      <Label fx:id="lbl_firstNameError" layoutX="391.0" layoutY="116.0" prefHeight="26.0" prefWidth="261.0" textFill="#f44336" />
+      <Label fx:id="lbl_roleError" layoutX="381.0" layoutY="366.0" prefHeight="18.0" prefWidth="228.0" textFill="#f44336"/>
+      <Label fx:id="lbl_userLocation" layoutX="391.0" layoutY="423.0" prefHeight="18.0" prefWidth="218.0" textFill="#f44336" />
+      <Button fx:id="btnDelete" layoutX="443.0" layoutY="484.0" mnemonicParsing="false" onAction="#btnDelete_onAction" prefHeight="26.0" prefWidth="124.0" style="-fx-cursor: hand; -fx-background-color: #ffc107; -fx-text-fill: white;" text="Delete" />
+
+
+    </children>
+</AnchorPane>

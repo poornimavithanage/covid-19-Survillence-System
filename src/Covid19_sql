@@ -1,0 +1,59 @@
+CREATE TABLE IF NOT EXISTS User(
+                                   userId VARCHAR(50) PRIMARY KEY ,
+                                   userRole VARCHAR(50) NOT NULL ,
+                                   username VARCHAR(50) UNIQUE NOT NULL ,
+                                   password VARCHAR(20) NOT NULL ,
+                                   contactNumber VARCHAR(11) NOT NULL ,
+                                   email VARCHAR(100) NOT NULL,
+                                   location VARCHAR(30) DEFAULT 'all' NOT NULL,
+                                   firstName VARCHAR(30) NOT NULL
+
+);
+
+CREATE TABLE GlobalCovidData(
+                                globalID INT AUTO_INCREMENT PRIMARY KEY ,
+                                admin_id  VARCHAR(50) not null,
+                                date DATE NOT NULL ,
+                                confirmedCases DECIMAL NOT NULL ,
+                                recoveredCases DECIMAL NOT NULL ,
+                                deadCases DECIMAL NOT NULL,
+                                CONSTRAINT GlobalCovidData_ibfk_1 foreign key (admin_id) references User (userId)
+);
+
+create index admin_id
+    on GlobalCovidData (admin_id);
+
+
+
+CREATE TABLE Hospital(
+                         hospitalId VARCHAR(50) PRIMARY KEY ,
+                         hospitalName VARCHAR(50) NOT NULL ,
+                         city VARCHAR(50) NOT NULL ,
+                         district VARCHAR(50) NOT NULL ,
+                         capacity INT NOT NULL ,
+                         directorName VARCHAR(50) NOT NULL ,
+                         directorContactNo VARCHAR(11) NOT NULL ,
+                         hospitalContactNo1 VARCHAR(11) NOT NULL ,
+                         hospitalContactNo2 VARCHAR(11) NOT NULL,
+                         hospitalFaxNo VARCHAR(11) NOT NULL ,
+                         hospitalEmailAddress VARCHAR(100) NOT NULL,
+                         status VARCHAR(20) DEFAULT 'not reserved' NOT NULL
+
+);
+
+
+
+
+CREATE TABLE QuarantineCenter(
+                                 quarantineCenterId VARCHAR(50) PRIMARY KEY ,
+                                 quarantineCenterName VARCHAR(50) NOT NULL ,
+                                 city VARCHAR(50) NOT NULL ,
+                                 district VARCHAR(50) NOT NULL ,
+                                 headName VARCHAR(50) NOT NULL ,
+                                 headContactNo VARCHAR(11) NOT NULL ,
+                                 centerContactNo1 VARCHAR(11) NOT NULL ,
+                                 centerContactNo2 VARCHAR(11) NOT NULL ,
+                                 capacity INT NOT NULL,
+                                 status VARCHAR(20) DEFAULT 'not reserved' NOT NULL
+
+);

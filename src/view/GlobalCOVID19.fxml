@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" prefHeight="676.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GlobalCovidController">
+    <children>
+        <Label layoutX="218.0" layoutY="24.0" text="Global COVID-19">
+            <font>
+                <Font name="System Bold" size="25.0" />
+            </font>
+        </Label>
+        <Button layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnHome_OnAction" prefHeight="40.0" prefWidth="120.0" text="Home">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../asset/home-icon.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Pane fx:id="Pane1" layoutX="18.0" layoutY="78.0" prefHeight="587.0" prefWidth="224.0">
+            <children>
+                <DatePicker fx:id="txtDate" layoutX="9.0" layoutY="23.0" prefHeight="25.0" prefWidth="208.0" onAction="#date_picker_OnAction" promptText="Date" />
+                <Label layoutX="6.0" layoutY="141.0" prefHeight="25.0" prefWidth="200.0" text="Enter the confirmed cases" />
+                <TextField fx:id="txtConfirmedCases" layoutX="3.0" layoutY="196.0" prefHeight="28.0" prefWidth="215.0" promptText="Confirmed Cases" />
+                <Label layoutX="10.0" layoutY="277.0" prefHeight="25.0" prefWidth="208.0" text="Enter the recovered cases" />
+                <TextField fx:id="txtRecoveredCases" layoutX="4.0" layoutY="328.0" prefHeight="28.0" prefWidth="215.0" promptText="Recovered" />
+                <Label layoutX="14.0" layoutY="419.0" prefHeight="17.0" prefWidth="200.0" text="Enter the death cases" />
+                <TextField fx:id="txtDeathCases" layoutX="7.0" layoutY="457.0" prefHeight="28.0" prefWidth="208.0" promptText="Deaths" />
+                <Button fx:id="btnUpdate" layoutX="18.0" layoutY="538.0" mnemonicParsing="false" onAction="#btnUpdate_OnAction" style="-fx-cursor: hand; -fx-background-color: #218838; -fx-text-fill: white;" text="Update" />
+            <Label fx:id="lbl_error_deathCases" layoutX="5.0" layoutY="497.0" prefHeight="25.0" prefWidth="208.0" textFill="#f44336" />
+            <Label fx:id="lbl_error_recoveredCases" layoutX="7.0" layoutY="371.0" prefHeight="25.0" prefWidth="208.0" textFill="#f44336" />
+            <Label fx:id="lbl_error_confirmedCases" layoutX="10.0" layoutY="237.0" prefHeight="25.0" prefWidth="208.0" textFill="#f44336" />
+            <Label fx:id="lbl_error_datePicker" layoutX="10.0" layoutY="74.0" prefHeight="28.0" prefWidth="208.0" textFill="#f44336" />
+            </children>
+        </Pane>
+        <Pane fx:id="Pane2" layoutX="275.0" layoutY="66.0" prefHeight="575.0" prefWidth="374.0">
+            <children>
+                <Label alignment="CENTER" layoutX="203.0" layoutY="50.0" prefHeight="20.0" prefWidth="120.0" text="Last Updated">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblUpdatedDate" layoutX="202.0" layoutY="95.0" text="">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="185.0" layoutY="181.0" prefHeight="28.0" prefWidth="162.0" text="Confirmed Cases">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblConfirmedCases" layoutX="205.0" layoutY="223.0" text="3,584,174" textFill="#1508ff">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <Label layoutX="215.0" layoutY="319.0" prefHeight="20.0" prefWidth="86.0" text="Recoverd">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblRecoveredCases" layoutX="213.0" layoutY="351.0" text="1,167,991" textFill="#07791f">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+                <Label layoutX="225.0" layoutY="458.0" prefHeight="20.0" prefWidth="65.0" text="Deaths">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblDeathCases" layoutX="215.0" layoutY="491.0" text="251,580" textFill="RED">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+            
+            
+            <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="66.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                   <Image url="@../asset/calender.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="74.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                   <Image url="@../asset/confirm_cases.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="74.0" layoutY="329.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/recovered_cases.jpg" />
+               </image></ImageView>
+            <ImageView fitHeight="74.0" fitWidth="74.0" layoutX="80.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/death_cases.png" />
+               </image></ImageView>
+            
+            
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
