@@ -1,4 +1,4 @@
-# Point of Sales System [JDBC]
+# Covid-19 Surveillance System [JDBC]
 > Project represents covid-19 surveillance system using JDBC
 
 
