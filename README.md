@@ -19,6 +19,10 @@ links :
     [JAVA](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) ,
     [MySQL](https://www.mysql.com/)
 
+## Technologies
+> JAVA FX | 
+> JDBC
+
 
 ## Installation
 
